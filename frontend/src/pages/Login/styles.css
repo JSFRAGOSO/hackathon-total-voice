@@ -1,0 +1,8 @@
+.content button#link.btn {
+    background: transparent;
+    color: blue;
+  }
+  
+  .content button#link.btn:hover { 
+    color: rgb(100, 100, 247);
+  }
