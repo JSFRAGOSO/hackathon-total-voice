@@ -45,6 +45,7 @@ body,input,button{
   font-size: 22px;
   line-height: 30px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .content form{
@@ -77,18 +78,18 @@ body,input,button{
 
 .content button.btn{
   border: 0px;
-  border-radius: 2px;
+  border-radius: 10px;
   width: 100%;
   height: 42px;
   padding: 0 20px;
   font-size: 16px;
   font-weight: bold;
-  background: #f05a5b;
+  background: #0b35ec;
   color: white;
   cursor:pointer;
   margin-top: 10px;
 }
 
 .content button.btn:hover{
-  background:#e03a5b;
+  background:#4d69e7;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import logo from './assets/line.png'
-//import Routes from './routes';
+import Routes from './routes';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <div className="containter">
       <img src={logo} alt="AirCnC"/>
       <div className="content">
-        
+        <Routes/>
       </div>
     </div>
   );

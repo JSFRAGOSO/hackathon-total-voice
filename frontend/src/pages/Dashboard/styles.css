@@ -1,0 +1,42 @@
+ul.trip-list{
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+ul.trip-list li{
+    display: flex;
+    flex-direction: column; 
+}
+
+ul.trip-list li button {
+    cursor: pointer;
+}
+
+ul.trip-list li button#update{
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+}
+
+ul.trip-list li header{
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+ul.trip-list li strong{
+    margin-top: 10px;
+    font-size: 24;
+    color:#444;
+}
+
+ul.trip-list li span{
+    margin-top: 10px;
+    font-size: 15px;
+    color:#999
+}
