@@ -1,0 +1,64 @@
+div.container{
+    width: 100%;
+    margin-bottom: 10px;
+}
+div.container label{
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+div.clients{
+    margin:10px auto 0;
+    border: 1px solid rgb(0, 0, 0);
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 0px 5px;
+}
+div.clients label{
+    font-size: 16px;
+    color: #444;
+    font-weight:bold;
+}
+
+ul.client-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+ul.client-list li{
+    list-style: none;
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px; 
+}
+ul.client-list p{
+    font-size: 14px;
+    margin-top: 15px;
+    width: 150px;
+}
+
+ul.client-list li button#add{
+    width: 70px;
+    height: 30px;
+    align-self: flex-end;
+    background-color: green;    
+}
+ul.client-list li button#remove{
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+    background-color: red;
+        
+}
+
+ul.client-list li button:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
