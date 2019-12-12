@@ -5,7 +5,7 @@ div.container{
 div.container label{
     font-size: 16px;
     color: #444;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 div.clients{
     margin:10px auto 0;
@@ -33,14 +33,15 @@ ul.client-list{
 ul.client-list li{
     list-style: none;
     display: grid;
-    margin: 15px;
-    grid-template-columns: 1fr 1fr;
+    margin: 5px;
+    grid-template-columns: 2fr 1fr;
     gap: 5px; 
 }
+
 ul.client-list p{
     font-size: 14px;
     margin-top: 15px;
-    width: 150px;
+    width: 200px;
 }
 
 ul.client-list li button#add{
@@ -48,7 +49,7 @@ ul.client-list li button#add{
     height: 30px;
     align-self: flex-end;
     background-color: green;
-    margin-left: auto;    
+    margin-left: auto;
 }
 ul.client-list li button#remove{
     width: 100px;

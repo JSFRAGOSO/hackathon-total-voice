@@ -15,9 +15,30 @@ export default function Order(){
     useEffect(() => {
         async function loadClients(){
             const optionsClient = [
-                { id: 1,value: 'Quintanda do Zé',added:false},
-                { id: 2, value: 'Mercado do seu José',added:false},
-                { id: 3, value: 'Mr. Josheph Marktplace',added:false},
+                { 
+                    id: 1,
+                    value: 'Quintanda do Zé',
+                    added:false,
+                    adress:'Rua das Fiandeiras, Vila Olímpia'
+                },
+                { 
+                    id: 2,
+                    value: 'Mercado do seu José',
+                    added:false,
+                    adress:'Rua 15 A, Taquarussu'
+                },
+                { 
+                    id: 3,
+                    value: 'Mr. Josheph Marktplace',
+                    added:false,
+                    adress:'Rua Limoeiro, Conjunto Adalberto Sena'
+                },
+                {
+                    id: 4,
+                    value: 'Markplace 24h',
+                    added:false,
+                    adress:'Rua João Rodrigues Braga, Vila Olavo Costa'
+                },
               ];
             setClients(optionsClient)
   
@@ -67,8 +88,11 @@ export default function Order(){
                         <li key={client.id}>
                                 <p>
                                     {client.value}
-                                </p>
-                                
+                                    <span>, </span>          
+                                    <strong>
+                                        {client.adress}
+                                    </strong>
+                                </p>                                
                                 {
                                 added?
                                     <button type="button" className="btn" id = "remove" onClick={handleAdd}>
