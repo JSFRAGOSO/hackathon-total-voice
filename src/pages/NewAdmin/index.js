@@ -11,27 +11,36 @@ export default function NewAdmin({history}){
 
     async function handleSubmit(event){
         event.preventDefault();
-
-        api.post('/companies', {
+        
+        await api.post('/create/company', {
             companyName,
             companyDocument,
           })
-          .then(function (response) {
-            const companyId = response.data._id;
-
-            api.post('/users', {
-                name,
-                email,
-                password,
-                companyId
-                })
-                .then(function (response) {
-                    history.push('/');
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-          })
+          .then(async function (response) {
+            if(response.data.error){
+                alert(response.data.error)
+            }else{    
+                const {companyToken,_id} = response.data;
+                
+                await api.post('/create/admin', {
+                    name,
+                    email,
+                    password,
+                    companyId:_id,
+                    token:companyToken
+                    })
+                    .then(function (response) {
+                        if(response.data.error){
+                            alert(response.data.error)
+                        }else{
+                            history.push('/');
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                
+    }})
           .catch(function (error) {
             console.log(error);
           });
@@ -56,6 +65,7 @@ export default function NewAdmin({history}){
             <label htmlFor="company">Password</label>
             <input 
                 id="password"
+                type="password"
                 placeholder="Your password"
                 value = {password}
                 onChange = { event => setPassword(event.target.value)}
@@ -74,7 +84,7 @@ export default function NewAdmin({history}){
                 value = {companyDocument}
                 onChange = { event => setCompanyDocument(event.target.value)}
             />
-            <button type = "submit" className="btn">Cadastrar</button>
+            <button type = "submit" className="btn">Register</button>
         </form>
     )
 }

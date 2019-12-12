@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './styles.css'
 
-//import api from '../../services/api';
+import api from '../../services/api';
 
 export default function Login({history}){
 
@@ -11,10 +11,19 @@ export default function Login({history}){
 
     async function handleSubmit(event){
         event.preventDefault();
-        //const response = await api.post('/sessions', {email});
-        //const {_id} = (response.data);
-       // localStorage.setItem('user',_id);
-        history.push('/dashboard');
+        await api.post('/session/admin'
+            ,{
+                email,
+                password
+            }
+        ).then(function (response){
+            const {token} = (response.data);
+            localStorage.setItem('token',token);
+            history.push('/dashboard');
+        })
+        .catch(function (error) {
+            alert(error)
+        }); 
     }
 
     return (

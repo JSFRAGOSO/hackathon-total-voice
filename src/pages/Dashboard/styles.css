@@ -7,6 +7,16 @@ ul.trip-list{
     margin-bottom: 30px;
 }
 
+ul.trip-list li div.trip-card{
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+}
+
+ul.trip-list li div.trip-description{
+    display: flex;
+    flex-direction: column;
+}
+
 ul.trip-list li{
     display: flex;
     flex-direction: column; 
