@@ -29,7 +29,7 @@ export default function Login({history}){
     return (
         <>
         <p>
-            Setup your company <strong>trips</strong> and <strong>track</strong> your deliveries from end to end
+            Setup your company <strong>orders</strong> and <strong>track</strong> your deliveries from end to end
         </p>
         <form onSubmit={handleSubmit}>
             <label htmlFor="email">E-mail *</label>
@@ -48,7 +48,7 @@ export default function Login({history}){
                 value={password}
                 onChange={event => setPassword(event.target.value)}
                 />
-            <button type="submit" className="btn" >Enter</button>
+            <button type="submit" className="btn" >Sign in</button>
             <Link to="/new/user">
                 <button type="button" className="btn" id = "link" >or Sign Up</button>
             </Link>

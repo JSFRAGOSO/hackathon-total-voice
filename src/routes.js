@@ -8,8 +8,6 @@ import Dashboard from './pages/Dashboard';
 import Order from './pages/NewOrder';
 import UpdateOrder from './pages/UpdateOrder';
 
-
-
 export default function Routes(){
     return (
         <BrowserRouter>

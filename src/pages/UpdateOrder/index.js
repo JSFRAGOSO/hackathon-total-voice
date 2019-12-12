@@ -13,11 +13,7 @@ export default function UpdateOrder({history,match}){
     const [added,setAdded] = useState(false);
 
     const {orderId} = match.params;
-    const optionsTruck = [
-        { value: 'IXS9299', label: 'IXS9299' },
-        { value: 'IYL1413', label: 'IYL1413' },
-        { value: 'ABC1A33', label: 'ABC1A33' },
-      ];
+
 
     useEffect(() => {
         async function loadClients(){
@@ -30,17 +26,11 @@ export default function UpdateOrder({history,match}){
   
         }
         async function loadTrucks(){
-            console.log(orderId);
               setTruck(orderId)
-  
         }        
-            loadClients();
-            loadTrucks();
+        loadClients();
+        loadTrucks();
     }, []);
-
-    function handleSelectedTruck(selectedOptionTruck){        
-        setSelectedOptionTruck({ selectedOptionTruck });
-    };
     
     async function handleAdd(){        
         setAdded(!added)
@@ -56,8 +46,8 @@ export default function UpdateOrder({history,match}){
                     value={truck}
                     onChange={event => setTruck(event.target.value)}
                     />
-            </form>
-            <>
+            
+            
                 <div className="clients">
                     <label htmlFor="client">Clients</label>
                     <ul className="client-list">
@@ -84,9 +74,7 @@ export default function UpdateOrder({history,match}){
                 <Link to="/dashboard">
                     <button type="submit" className="btn" >FINISH</button>
                 </Link>
-            </>
-            }
-
+            </form>
         </div>
      )
 }
