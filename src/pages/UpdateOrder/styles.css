@@ -34,7 +34,7 @@ ul.client-list li{
     list-style: none;
     display: grid;
     margin: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5px; 
 }
 ul.client-list p{
@@ -47,14 +47,15 @@ ul.client-list li button#add{
     width: 70px;
     height: 30px;
     align-self: flex-end;
-    background-color: green;    
+    background-color: green;
+    margin-left: auto;    
 }
 ul.client-list li button#remove{
     width: 100px;
     height: 30px;
     align-self: flex-end;
     background-color: red;
-        
+    margin-left: auto;
 }
 
 ul.client-list li button:hover {

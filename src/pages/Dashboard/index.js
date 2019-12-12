@@ -29,14 +29,16 @@ export default function Dashboard({history}){
     }
 
     return (
-    <>
+    <>  
+        <p>
+            Welcome <strong>User</strong>
+        </p>
         <ul className="trip-list">
         {orders.map(order =>(
                         <li key={order.id}>
                             <div className="trip-card">
                                 <div className="trip-description">
                                     <strong>{order.value}</strong>
-                                    <span></span>
                                 </div>
                                 
                                 <button type="button" className="btn" id = "update" onClick={(event) => handleUpdate(event,order.value)}>
